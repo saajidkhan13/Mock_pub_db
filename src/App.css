@@ -21,4 +21,6 @@
 #detail-container {
   grid-column: 2;
   text-align: center;
+  width: 1vh;
+
 }

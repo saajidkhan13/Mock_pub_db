@@ -5,14 +5,16 @@ class Filter extends Component {
   render() {
     return (
       <div style={{margin: "auto", width: "450px"}}>
-        <input 
+        <input
           type="text"
           placeholder="search by name and/or breed"
           style={{width: "250px"}}
+          onChange={this.props.handleInput}
         />
         Good boiz only
-        <input 
+        <input
           type="checkbox"
+          onChange={this.props.handleCheck}
         />
       </div>
     )

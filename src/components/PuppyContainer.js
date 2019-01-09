@@ -4,11 +4,16 @@ import '../App.css';
 import Puppy from './Puppy';
 
 class PuppyContainer extends Component {
+
+
   render() {
+    const puppies = this.props.puppies
     return (
       <div id="puppy-container">
         <h1>PUPPIES!!!</h1>
-        {/* {map puppies} */}
+        {puppies.map(puppy => {
+          return <Puppy key={puppy.id} puppyInfo={puppy} handleClick={this.props.handleClick} handleToggle={this.props.handleToggle}/>
+        })}
       </div>
     )
   }
